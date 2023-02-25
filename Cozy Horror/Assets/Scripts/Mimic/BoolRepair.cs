@@ -5,9 +5,19 @@ using UnityEngine;
 public class BoolRepair : MonoBehaviour
 {
     public bool isRepair;
+    [SerializeField] GameObject repairedObject;
+    [SerializeField] GameObject brokenObject;
     private void Start()
     {
         RandomBool();
+        if (isRepair)
+        {
+            this.SwitchStateToRepaired();
+        }
+        else
+        {
+            this.SwitchStateToBroken();
+        }
     }
 
     public void RandomBool()
@@ -26,4 +36,22 @@ public class BoolRepair : MonoBehaviour
     {
         isRepair = !isRepair;
     }
+
+    public bool getBool()
+    {
+        return isRepair;
+    }
+
+    public void SwitchStateToBroken()
+    {
+        repairedObject.SetActive(false);
+        brokenObject.SetActive(true);
+    }
+
+    public void SwitchStateToRepaired()
+    {
+        repairedObject.SetActive(true);
+        brokenObject.SetActive(false);
+    }
+
 }

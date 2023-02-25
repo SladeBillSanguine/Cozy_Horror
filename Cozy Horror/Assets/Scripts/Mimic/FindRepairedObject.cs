@@ -6,7 +6,10 @@ public class FindRepairedObject : MonoBehaviour
 {
 
     List<GameObject> _targets;
-    GameObject[] _objects;
+    BoolRepair[] _objects;
+    bool _isRepaired;
+    bool _found;
+    int randNumber;
 
     /* private void Awake()
      {
@@ -18,12 +21,32 @@ public class FindRepairedObject : MonoBehaviour
 
     private void Awake()
     {
-        _objects = GetComponentsInChildren<GameObject>();
+        _objects = this.GetComponentsInChildren<BoolRepair>();
     }
 
     public void Finde()
     {
-        int randNumber = Random.Range(1, 2);
+        randNumber = Random.Range(0, _objects.Length);
+        _isRepaired = _objects[randNumber].getBool();
+
+        if (_isRepaired)
+        {
+            _found = true;
+        }else{
+            _found = false;
+        }
+    }
+
+    
+
+    public void changeState()
+    {
+        do {
+            Finde();
+        }
+        while (!_found);
+        _objects[randNumber].SwitchStateToBroken();
+
     }
 
 }

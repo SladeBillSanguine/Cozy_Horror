@@ -6,8 +6,9 @@ public class HorcruxSpawner : MonoBehaviour
 {
     public GameObject[] newHorcrux;
     [SerializeField] HorcruxPatrol _neuePosition;
+    [SerializeField] FindRepairedObject _brokeScript;
     public GameObject activateTimer;
-    public Timer timer;
+    private Timer timer;
 
     private void Start()
     {
@@ -40,6 +41,8 @@ public class HorcruxSpawner : MonoBehaviour
         yield return new WaitForSeconds(60);
         Destroy(nh);
         //Destroy Object as consequence
+        _brokeScript.changeState();
         StartCoroutine(SpawnAfterTime());
+        
     }
 }
