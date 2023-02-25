@@ -9,9 +9,4 @@ public class HorcruxInteract : MonoBehaviour
         GameObject.Find("HorcruxSpawner").GetComponent<HorcruxSpawner>().SpawnNewHorcrux();
         Destroy(this.gameObject);
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-    }
 }
