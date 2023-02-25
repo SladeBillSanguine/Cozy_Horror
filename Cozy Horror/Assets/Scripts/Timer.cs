@@ -42,6 +42,11 @@ public class Timer : MonoBehaviour
         }
         SetTimerText();
     }
+
+    public void RestartTimer()
+    {
+        currentTime = 60;
+    }
     
     private void SetTimerText()
     {
