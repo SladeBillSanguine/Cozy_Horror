@@ -34,6 +34,7 @@ public class HorcruxSpawner : MonoBehaviour
         //Add Timer 60 seconds, to find the mimic, here
         yield return new WaitForSeconds(60);
         Destroy(nh);
+        //Destroy Object as consequence
         StartCoroutine(SpawnAfterTime());
     }
 }
