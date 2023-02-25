@@ -17,5 +17,12 @@ public class HorcruxSpawner : MonoBehaviour
         yield return new WaitForSeconds(2);
         GameObject nh = Instantiate(newHorcrux[Random.Range(0, newHorcrux.Length)], this.transform) as GameObject;
         nh.transform.localPosition = new Vector3(0, 0, 0);
+        StartCoroutine(DestroyAfterTime());
+    }
+    IEnumerator DestroyAfterTime()
+    {
+        //Add Timer 60 seconds, to find the mimic, here
+        yield return new WaitForSeconds(60);
+        Destroy(this.gameObject);
     }
 }
