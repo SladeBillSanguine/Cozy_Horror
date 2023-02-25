@@ -4,27 +4,11 @@ using UnityEngine;
 
 public class RepairScript : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnTriggerStay2D(Collider2D collision)
     {
-       
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-         if(collision.tag == "Player")
-        {
-            Debug.Log("ins");
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-            Debug.Log("funk"); 
+         if(collision.tag == "Player" && Input.GetKey(KeyCode.E))
+         {
             Destroy(gameObject);
-            }
-        }
+         }
     }
 }
