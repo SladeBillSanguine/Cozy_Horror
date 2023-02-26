@@ -1978,7 +1978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 478257256}
-  currentTime: 6
+  currentTime: 500
   countDown: 1
   hasLimit: 1
   timerLimit: 0
