@@ -37,8 +37,9 @@ public class HorcruxSpawner : MonoBehaviour
     }
     IEnumerator DestroyAfterTime(GameObject nh)
     {
-        activateTimer.SetActive(false);
+        
         yield return new WaitForSeconds(60);
+        activateTimer.SetActive(false);
         Destroy(nh);
         //Destroy Object as consequence
         _brokeScript.changeState();
