@@ -30,10 +30,12 @@ public class HorcruxSpawner : MonoBehaviour
         transform.position = _neuePosition.GetTargetPosition();
         yield return new WaitForSeconds(10);
         GameObject nh = Instantiate(newHorcrux[Random.Range(0, newHorcrux.Length)], this.transform) as GameObject;
-        nh.transform.localPosition = new Vector3(0, 0, 0);
+        nh.transform.localPosition = new Vector3(0, 0, 0); 
         StartCoroutine(DestroyAfterTime(nh));
         timer.RestartTimer();
         activateTimer.SetActive(true);
+
+        
     }
     IEnumerator DestroyAfterTime(GameObject nh)
     {
