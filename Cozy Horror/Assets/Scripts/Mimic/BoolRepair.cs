@@ -18,6 +18,7 @@ public class BoolRepair : MonoBehaviour
         {
             this.SwitchStateToBroken();
         }
+        ChangeBool();
     }
 
     public void RandomBool()
@@ -47,12 +48,14 @@ public class BoolRepair : MonoBehaviour
     {
         repairedObject.SetActive(false);
         brokenObject.SetActive(true);
+        ChangeBool();
     }
 
     public void SwitchStateToRepaired()
     {
         repairedObject.SetActive(true);
         brokenObject.SetActive(false);
+        ChangeBool();
     }
 
 }

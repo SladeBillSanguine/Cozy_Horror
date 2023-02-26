@@ -10,6 +10,7 @@ public class FindRepairedObject : MonoBehaviour
     bool _isRepaired;
     bool _found;
     int randNumber;
+    int Anzahl = 0;
 
     /* private void Awake()
      {
@@ -36,7 +37,21 @@ public class FindRepairedObject : MonoBehaviour
             _found = false;
         }
     }
-
+     public int AnzahlR()
+    {
+        Anzahl = 0;
+        for(int i = 0; i <= _objects.Length-1; i++)
+        {
+            Debug.Log(_objects[i].getBool());
+            if (_objects[i].getBool())
+            {
+                Anzahl++;
+                
+            }
+        }
+        
+        return Anzahl;
+    } 
     
 
     public void changeState()
