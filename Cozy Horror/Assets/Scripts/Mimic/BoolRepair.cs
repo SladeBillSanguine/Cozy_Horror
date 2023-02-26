@@ -22,7 +22,7 @@ public class BoolRepair : MonoBehaviour
 
     public void RandomBool()
     {
-        int randNumber = Random.Range(1, 2);
+        /*int randNumber = Random.Range(1, 2);
         if (randNumber == 1)
         {
             isRepair = true;
@@ -30,7 +30,8 @@ public class BoolRepair : MonoBehaviour
         else
         {
             isRepair = false;
-        }
+        }*/
+        isRepair = false;
     }
     public void ChangeBool()
     {
