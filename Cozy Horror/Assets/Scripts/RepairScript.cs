@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class RepairScript : MonoBehaviour
 {
+    [SerializeField] BoolRepair Parent;
     private void OnTriggerStay2D(Collider2D collision)
     {
          if(collision.tag == "Player" && Input.GetKey(KeyCode.E))
          {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Parent.SwitchStateToRepaired();
          }
     }
 }
