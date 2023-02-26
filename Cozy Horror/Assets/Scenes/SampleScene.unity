@@ -606,47 +606,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1125685371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3839958183177178958, guid: 00a63479313e01a4d84becc26e9cdea3, type: 3}
-  m_PrefabInstance: {fileID: 3839958182359534212}
-  m_PrefabAsset: {fileID: 0}
---- !u!58 &1125685377
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125685371}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.15, y: -0.5}
-  serializedVersion: 2
-  m_Radius: 2.88
---- !u!95 &1125685384
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1125685371}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4031c8b9ea532f44486083318d6ff606, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1498467062
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,14 +1083,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3839958183177178954, guid: 00a63479313e01a4d84becc26e9cdea3, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3839958183177178954, guid: 00a63479313e01a4d84becc26e9cdea3, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bfb110fc4ecd1144c947b3bb33450dba, type: 3}
     - target: {fileID: 3839958183177178955, guid: 00a63479313e01a4d84becc26e9cdea3, type: 3}
       propertyPath: m_RootOrder
       value: 3
